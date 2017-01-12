@@ -1,0 +1,28 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "MongoDB",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null,
+      "metricMatches" : "^mongo.*"
+    },
+    "metrics" : [ {
+      "match" : "mongo\\.(connections|extra_info)\\.*",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "mongo\\.globalLock\\.totalTime",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    } ]
+  }
+}

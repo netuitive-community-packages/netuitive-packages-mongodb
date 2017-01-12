@@ -1,0 +1,82 @@
+{
+  "id" : "netuitive.packages.mongodb",
+  "version" : "1.0.0",
+  "manifest" : {
+    "name" : "Netuitive Packages MongoDB",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the elements collected from the MongoDB collector in the Netuitive Agent.",
+    "author" : {
+      "name" : "Netuitive Research",
+      "email" : "research@netuitive.com"
+    },
+    "distro" : {
+      "logo" : "http://assets.app.netuitive.com/pkg/logo/netuitive/banner_logo.png",
+      "download" : "https://github.com/netuitive-community-packages/netuitive-packages-mongodb/archive/master.zip"
+    },
+    "compatibility" : [ "INFRASTRUCTURE:MongoDB" ],
+    "tags" : [ ],
+    "checksum" : null
+  },
+  "policies" : [ {
+    "data" : {
+      "file" : "policies/mongodb.-.connections.in.use.threshold.exceeded.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/mongodb.-.elevated.number.of.queued.read.requests.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/mongodb.-.elevated.number.of.queued.write.requests.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/mongodb.-.elevated.percentage.of.connections.in.use.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/mongodb.-.suspicious.read.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/mongodb.-.suspicious.write.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "analyticConfigurations" : [ {
+    "data" : {
+      "file" : "analyticConfigurations/ace-mongodb.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-mongodb.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-mongodb.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ],
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/mongodb.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
+}
