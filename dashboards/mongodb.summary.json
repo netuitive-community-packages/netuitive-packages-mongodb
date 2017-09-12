@@ -35,31 +35,6 @@
         "selectedTab" : "graph"
       }
     }, {
-      "id" : "3db80164-a157-4067-afc8-820ddc387f6e",
-      "name" : "Highest Connection Utilization",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.linux.mongo.connections.utilizationpercent",
-        "metricScopeTags" : "[]",
-        "width" : "auto",
-        "metricAgg" : "avg",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      }
-    }, {
       "id" : "40ecd5e0-6ee0-4b39-8ed6-eac69ffe484b",
       "name" : "Instances with Highest Number of Writes",
       "description" : null,
