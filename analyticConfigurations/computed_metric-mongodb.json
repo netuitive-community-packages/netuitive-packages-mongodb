@@ -4,7 +4,9 @@
       {
         "match": "netuitive.linux.mongo.connections.utilizationpercent",
         "properties": {
-          "expression": "(data['mongo.connections.current'].actual / (data['mongo.connections.current'].actual + data['mongo.connections.available'].actual)) * 100",
+          "expressions": [
+            "(${mongo.connections.current}.actual / (${mongo.connections.current}.actual + ${mongo.connections.available}.actual)) * 100"
+          ],
           "fqn": "netuitive.linux.mongo.connections.utilizationpercent",
           "name": "Connection Utilization Percent"
         }
@@ -12,7 +14,9 @@
       {
         "match": "netuitive.linux.mongo.opcounters.totalreads",
         "properties": {
-          "expression": "data['mongo.opcounters.query'].actual + data['mongo.opcounters.getmore'].actual",
+          "expressions": [
+            "${mongo.opcounters.query}.actual + ${mongo.opcounters.getmore}.actual"
+          ],
           "fqn": "netuitive.linux.mongo.opcounters.totalreads",
           "name": "Total Reads"
         }
@@ -20,7 +24,9 @@
       {
         "match": "netuitive.linux.mongo.opcounters.totalwrites",
         "properties": {
-          "expression": "data['mongo.opcounters.insert'].actual + data['mongo.opcounters.update'].actual + data['mongo.opcounters.delete'].actual",
+          "expressions": [
+            "${mongo.opcounters.insert}.actual + ${mongo.opcounters.update}.actual + ${mongo.opcounters.delete}.actual"
+          ],
           "fqn": "netuitive.linux.mongo.opcounters.totalwrites",
           "name": "Total Writes"
         }
