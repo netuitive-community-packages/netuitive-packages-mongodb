@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - "6"
-
+- '8'
+install:
+- npm i -g metricly-cli
 script:
-  - npm i git+https://git@github.com/Netuitive/netuitive-package-validator.git;
-    node -e "require('package-validator').validate('.', require('./package.json').id)";
+- metricly package validate && metricly package lint
+notifications:
+  slack:
+    secure: HwJpYvh5V2hjbXdWLO59ftBXggCQfg5wRyBYNJJfD7cxkTbKEb1axGozf7QX7Aw9lqTVbew+qWDrcP4Wbv++iClLLocBuWMJwZYnjllTkv9Dkfh+k4rWA4E4qrwkOChH7kwOeBXvkIpQivCjBuk8nlKaSPU5Cmz+dWW2Wh9szR4RFJ0zZ1oV8kK0zMh52hmFQXQGX8pJAew3ibaANEI9w3YXg17Jm1fCmZSNGpMVkPUZ82JdXE+W2UreYUKxMbzAWWWUuqXBm3m8xZ84H0O5WCqyvCI3uKis01MGcPC1VpUsqQglH61VXiZPLBfokrNq4FlG51JpjF2qX7AxKCOFQsM7MN+dIUjHBhBFHJ7uSy9/LyEESF3FU8fST9OAxdtcCOnQJfeGpYaeow1rqvgrsId9lxkrR1MU6K+wp7W/R852vFvRKafmZO0+IpwIHLZ7MHaQRMa1HCNXYH9lTRunoK/m5m3nTIqatRzaigh4WDtSEsRFE1f+EKyPLz2rQFBcCSgFOHqxijJ3RDcQz1kew/rc3Y3zNs7YZv6YGBbLV3EosLTkS3nmjrHg9gSoaoN09ung6nui4iY08moy441W+gHziYcXBbPoc3UMSCZ5bkM731mc08DvD2VbQi8jeM5cEwn/VFmguZXJcqtyD7waqK8bGhvFYUCvyi0p3DkEadw=

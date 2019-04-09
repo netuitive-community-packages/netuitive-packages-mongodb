@@ -1,67 +1,70 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "MongoDB",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^mongo.*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "mongo\\.(connections|extra_info|opcounters|opcountersRepl)\\..*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "mongo\\.globalLock\\.(activeClients|currentQueue)\\..*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "mongo\\.globalLock\\.totalTime",
+        "properties": {
+          "tags": {
+            "unit": "µs"
+          }
+        }
+      },
+      {
+        "match": "mongo\\.network\\.(bytesIn|bytesOut)",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "mongo\\.network\\.numRequests",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "netuitive\\.linux\\.mongo\\.connections\\.utilizationpercent",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive\\.linux\\.mongo\\.opcounters.*",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      }
+    ],
+    "name": "MongoDB",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^mongo.*"
     },
-    "metrics" : [ {
-      "match" : "mongo\\.(connections|extra_info|opcounters|opcountersRepl)\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "mongo\\.globalLock\\.(activeClients|currentQueue)\\..*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "mongo\\.globalLock\\.totalTime",
-      "properties" : {
-        "tags" : {
-          "unit" : "µs"
-        }
-      }
-    }, {
-      "match" : "mongo\\.network\\.(bytesIn|bytesOut)",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "mongo\\.network\\.numRequests",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "netuitive\\.linux\\.mongo\\.connections\\.utilizationpercent",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent",
-          "utilization" : true
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive\\.linux\\.mongo\\.opcounters.*",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
