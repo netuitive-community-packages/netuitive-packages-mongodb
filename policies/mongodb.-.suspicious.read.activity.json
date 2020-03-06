@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "MongoDB - Suspicious Read Activity",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+        "SERVER"
+      ]
     }
   }
 }
