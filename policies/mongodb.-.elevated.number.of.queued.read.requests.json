@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "MongoDB - Elevated Number of Queued Read Requests",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+        "SERVER"
+      ]
     }
   }
 }

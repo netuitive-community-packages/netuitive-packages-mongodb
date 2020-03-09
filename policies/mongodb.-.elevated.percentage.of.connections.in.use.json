@@ -19,7 +19,9 @@
     "enabled": true,
     "name": "MongoDB - Elevated Percentage of Connections in Use",
     "scope": {
-      "elementType": "SERVER"
+      "elementTypes": [
+        "SERVER"
+      ]
     }
   }
 }
